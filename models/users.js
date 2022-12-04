@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
         validate(value) {
-			return !/RegExpression.forValidEmail/.test(value)
+			return !RegExpression.forValidEmail.test(value)
 		}
     },
     password : {
