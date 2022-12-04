@@ -1,11 +1,11 @@
 "use strict"
 const userDestinations = {
-    signUp: {
+    signup: {
         path: "/signup",
 		successCode: 201,
 		failureCode: 400
     },
-    signIn : {
+    signin : {
         path: "/signin",
         successCode: 200,
 		failureCode: 401
