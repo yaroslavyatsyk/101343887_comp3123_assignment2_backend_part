@@ -1,3 +1,4 @@
+"use strict"
 const userDestinations = {
     signUp: {
         path: "/signUp",
