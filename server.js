@@ -22,7 +22,7 @@ mongoose.connect("mongodb+srv://yaroslav9728:Education2022@cluster0.elr77qb.mong
     process.exit();
 });
 app.get('/', (req, res) => {
-    res.send("<h1>Welcome to Note taking application - Week06 Exercise</h1>");
+    res.send("<h1>Welcome to Employee app - Assignment 2</h1>");
 });
 
 
