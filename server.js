@@ -12,7 +12,7 @@ app.use('/api/emp',employeeRouter)
 
 mongoose.Promise = global.Promise
 
-mongoose.connect("mongodb+srv://yaroslav9728:Educ2022@cluster0.elr77qb.mongodb.net/ass1db?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://yaroslav9728:Education@cluster0.elr77qb.mongodb.net/ass1db?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
