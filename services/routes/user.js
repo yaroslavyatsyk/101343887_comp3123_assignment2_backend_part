@@ -45,23 +45,23 @@ routes.post(
 		const password = request.body.password
 		
 		try {
-			const allUsers = await user
+			const users = await user
 				.find()
 				.then((results) => {
-					return results.map(eachUser => {
+					return results.map(user => {
 						return {
-							username: eachUser.get('username'),
+							username: user.get('username'),
 
-							password: eachUser.get('password')
+							password: user.get('password')
 						}
 					})
 				})
 			
 			let isValidLoginAttempt = false
-			allUsers.forEach(anyUser => {
+			users.forEach(user => {
 				// If user logs in by a matching username or email, with matching password
 				if (
-					(anyUser.username && (anyUser.username === username) && (anyUser.password === password))
+					(user.username && (user.username === username) && (user.password === password))
 				) {
 					isValidLoginAttempt = true
 				}
