@@ -6,8 +6,9 @@ const cors = require('cors')
 const app = express()
 app.use(express.json())
 
-app.use('/api',userRouter)
+app.use('/api/user',userRouter)
 app.use('/api/emp',employeeRouter)
+app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 mongoose.Promise = global.Promise
