@@ -34,8 +34,8 @@ routes.post(
 		}
 
 		const newEmployee = new employeesPattern(/* from: */ {
-			first_name: request.body.firstName,
-			last_name: request.body.lastName,
+			first_name: request.body.first_name,
+			last_name: request.body.last_name,
 			email: request.body.email,
 			gender: request.body.gender,
 			salary: request.body.salary
