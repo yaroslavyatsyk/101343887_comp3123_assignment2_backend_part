@@ -2,7 +2,7 @@
 
 const express = require("express")
 const routes = express.Router()
-const endpoints = require("../endDestinations/employeeDest")
+const endpoints = require("../endDestinations/employees")
 const employeesPattern = require("../../models/employees")
 
 routes.get(
