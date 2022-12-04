@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const userRouter = require('./services/routes/userRoutes')
-const employeeRouter = require('./services/routes/employeeRoutes')
+const userRouter = require('./services/routes/user')
+const employeeRouter = require('./services/routes/employees')
 
 const app = express()
 app.use(express.json())
