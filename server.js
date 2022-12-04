@@ -6,8 +6,8 @@ const employeeRouter = require('./services/routes/employeeRoutes')
 const app = express()
 app.use(express.json())
 
-app.use('/api',userRouter)
-app.use('/api/emp',employeeRouter)
+app.use('api',userRouter)
+app.use('api/emp',employeeRouter)
 
 
 mongoose.Promise = global.Promise
