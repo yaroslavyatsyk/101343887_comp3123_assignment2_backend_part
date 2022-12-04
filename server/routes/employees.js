@@ -65,7 +65,7 @@ routes.get(
 		try {
 			const employee = await employeesPattern
 				.findById(empIdFromUrl)
-				.select('-_id first_name last_name email gender salary')
+				.select('first_name last_name email gender salary')
 			// get all fields except _id
 
 			if (!employee) {
