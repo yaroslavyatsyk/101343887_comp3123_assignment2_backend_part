@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 
 app.use('/api/user',userRouter)
-app.use('/api/emp',employeeRouter)
+app.use('/api/emp/employees',employeeRouter)
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
