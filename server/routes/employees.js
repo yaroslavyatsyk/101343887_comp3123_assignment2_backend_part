@@ -9,7 +9,7 @@ routes.get(
 	endpoints.viewAll.path,
 	async (request, response) => {
 		try {
-			const employees = await employeesPattern.find({})
+			const employees = await employeesPattern.find()
 			return response
 				.status(endpoints.viewAll.successCode)
 				.send(employees)
