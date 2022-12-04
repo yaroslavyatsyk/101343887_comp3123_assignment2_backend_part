@@ -38,7 +38,7 @@ routes.post(
 			last_name: request.body.lastName,
 			email: request.body.email,
 			gender: request.body.gender,
-			salary: Number(request.body.salary),
+			salary: request.body.salary
 		})
 		try {
 			await newEmployee.save()
