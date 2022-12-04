@@ -1,5 +1,5 @@
 "use strict"
-const userDestinations = {
+const UserDestinations = {
     signUp: {
         path: "/signup",
 		successCode: 201,
@@ -12,4 +12,4 @@ const userDestinations = {
     }
 }
 
-module.exports = userDestinations
+module.exports = UserDestinations
