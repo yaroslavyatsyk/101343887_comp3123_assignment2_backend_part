@@ -2,7 +2,7 @@
 
 const express = require("express")
 const routes = express.Router()
-const userPoints = require("../endDestinations/user")
+const userPoints = require("../endpoints/user")
 const user = require("../../models/users");
 
 routes.post(
