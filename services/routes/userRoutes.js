@@ -41,7 +41,7 @@ routes.post(
 	async (request, response) => {
 		// Extract request info
 		const username = request.body.username
-		const email = request.body.email
+		
 		const password = request.body.password
 		
 		try {
@@ -51,7 +51,7 @@ routes.post(
 					return results.map(eachUser => {
 						return {
 							username: eachUser.get('username'),
-							email: eachUser.get('email'),
+
 							password: eachUser.get('password')
 						}
 					})
@@ -61,8 +61,7 @@ routes.post(
 			allUsers.forEach(anyUser => {
 				// If user logs in by a matching username or email, with matching password
 				if (
-					(anyUser.username && (anyUser.username === username) && (anyUser.password === password)) ||
-					(anyUser.email && (anyUser.email === email) && (anyUser.password === password))
+					(anyUser.username && (anyUser.username === username) && (anyUser.password === password))
 				) {
 					isValidLoginAttempt = true
 				}
@@ -74,7 +73,6 @@ routes.post(
 					.send({
 						"status": true,
 						"username": username,
-						"email": email,
 						"message": "User logged in successfully"
 					})
 			} else {
@@ -83,7 +81,6 @@ routes.post(
 					.send({
 						"status": false,
 						"username": username,
-						"email": email,
 						"message": "Cannot log in. Unregistered username or password"
 					})
 			}
