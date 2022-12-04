@@ -3,7 +3,7 @@
 const express = require("express")
 const routes = express.Router()
 const userPoints = require("../endpoints/user")
-const user = require("../../models/users");
+const user = require("../../models/user");
 
 routes.post(
 	userPoints.signUp.path,

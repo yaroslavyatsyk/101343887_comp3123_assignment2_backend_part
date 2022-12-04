@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const appSchema = require('../constants/AppSchema')
 const RegExpression = require('../constants/RegularExpression')
 
 const userSchema = new mongoose.Schema({
@@ -18,6 +19,9 @@ const userSchema = new mongoose.Schema({
         type: String,
     }
     
+},
+{
+    set: appSchema.userSet
 })
 const userModel = mongoose.model('users',userSchema)
 module.exports = userModel

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const appSchema = require('../constants/AppSchema')
 
 const employeeSchema = new mongoose.Schema({
     first_name: {
@@ -23,7 +24,9 @@ const employeeSchema = new mongoose.Schema({
         type: Number,
         require: true
     }
-})
+},
+{ collection: appSchema.employeeCollection }
+)
 
 const employeeModel = mongoose.model('employees', employeeSchema)
 
