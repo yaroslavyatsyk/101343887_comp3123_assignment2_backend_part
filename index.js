@@ -2,13 +2,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const userRouter = require('./api/routes/user')
 const employeeRouter = require('./api/routes/employees')
-
+const cors = require('cors')
 const app = express()
 app.use(express.json())
 
 app.use('/api',userRouter)
 app.use('/api/emp',employeeRouter)
-
+app.use(cors())
 
 mongoose.Promise = global.Promise
 
