@@ -6,12 +6,12 @@ const endpoints = require("../endDestinations/userDest")
 const user = require("../../models/users");
 
 routes.post(
-	endpoints.signup.path,
+	endpoints.signUp.path,
 	async (request, response) => {
 		// Validate request
 		if (Object.keys(request.body).length === 0) {
 			return response
-				.status(endpoints.signup.failureCode)
+				.status(endpoints.signUp.failureCode)
 				.send({
 					message: "User account content cannot be empty"
 				})
@@ -22,13 +22,13 @@ routes.post(
 		try {
 			await newUser.save()
 			return response
-				.status(endpoints.signup.successCode)
+				.status(endpoints.signUp.successCode)
 				.send({
 					message: `New user ${newUser.username} added successfully`
 				})
 		} catch (error) {
 			return response
-				.status(endpoints.signup.failureCode)
+				.status(endpoints.signUp.failureCode)
 				.send({
 					message: `Error creating new user ${newUser.username}. Double check connection or new user credentials and try again!`
 				})
@@ -37,7 +37,7 @@ routes.post(
 )
 
 routes.post(
-	endpoints.signin.path,
+	endpoints.login.path,
 	async (request, response) => {
 		// Extract request info
 		const username = request.body.username
@@ -69,7 +69,7 @@ routes.post(
 			
 			if (isValidLoginAttempt) {
 				return response
-					.status(endpoints.signin.successCode)
+					.status(endpoints.login.successCode)
 					.send({
 						"status": true,
 						"username": username,
@@ -77,7 +77,7 @@ routes.post(
 					})
 			} else {
 				return response
-					.status(endpoints.signin.failureCode)
+					.status(endpoints.login.failureCode)
 					.send({
 						"status": false,
 						"username": username,
