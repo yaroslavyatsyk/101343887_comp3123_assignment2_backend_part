@@ -8,7 +8,7 @@
       "dev": "nodemon index.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "Yaroslav Yatsyk",
     "license": "ISC",
     "dependencies": {
       "cors": "^2.8.5",
