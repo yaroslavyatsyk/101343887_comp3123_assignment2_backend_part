@@ -6,7 +6,7 @@ const UserDestinations = {
 		failureCode: 400
     },
     login : {
-        path: "/login",
+        path: "/signin",
         successCode: 200,
 		failureCode: 401
     }
