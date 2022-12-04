@@ -1,10 +1,10 @@
 const userDestinations = {
-    signup: {
+    signUp: {
         path: "/signUp",
 		successCode: 201,
 		failureCode: 400
     },
-    signin : {
+    signIn : {
         path: "/signIn",
         successCode: 200,
 		failureCode: 401
