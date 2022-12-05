@@ -29,7 +29,7 @@ routes.post(
 			return response
 				.status(endpoints.addNew.failureCode)
 				.send({
-					message: "Employee account content cannot be empty"
+					message: "Employee information cannot be empty"
 				})
 		}
 
@@ -97,7 +97,7 @@ routes.put(
 			return response
 				.status(endpoints.editById.badRequestCode)
 				.send({
-					message: "Missing update employee account content"
+					message: "Missing update employee information"
 				})
 		}
 
