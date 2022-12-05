@@ -27,6 +27,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(3035, () => {
-    console.log(`Server is listening on port http://localhost:${3035}`);
+app.listen(3001, () => {
+    console.log(`Server is listening on port http://localhost:${3001}`);
 });
