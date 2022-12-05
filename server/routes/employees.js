@@ -32,6 +32,7 @@ routes.post(
 					message: "Employee information cannot be empty"
 				})
 		}
+		else {
 
 		const newEmployee = request.body
 let new_employee = new employeesPattern(newEmployee)
@@ -52,7 +53,8 @@ let new_employee = new employeesPattern(newEmployee)
 				})
 		}
 	}
-)
+
+})
 
 routes.get(
 	endpoints.viewById.path,
