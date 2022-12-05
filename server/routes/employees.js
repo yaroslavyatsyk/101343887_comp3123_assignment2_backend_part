@@ -33,25 +33,22 @@ routes.post(
 				})
 		}
 
-		const newEmployee = new employeesPattern(/* from: */ {
-			first_name: request.body.first_name,
-			last_name: request.body.last_name,
-			email: request.body.email,
-			gender: request.body.gender,
-			salary: Number(request.body.salary)
-		})
+		const newEmployee = request.body
+let new_employee = new employeesPattern(newEmployee)
+
 		try {
-			await newEmployee.save()
+			
+			await new_employee.save()
 			return response
 				.status(endpoints.addNew.successCode)
 				.send({
-					message: `New employee ${newEmployee.full_name} added`
+					message: `New employee ${new_employee.first_name} ${new_employee.last_name} added successfully`
 				})
 		} catch (error) {
 			return response
 				.status(endpoints.addNew.failureCode)
 				.send({
-					message: `Error creating new employee ${newEmployee.full_name}. Double check connection or new employee credentials and try again!`
+					message: `Error creating new employee ${new_employee.first_name}. Double check connection or new employee credentials and try again!`
 				})
 		}
 	}
