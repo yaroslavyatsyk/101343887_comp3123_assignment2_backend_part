@@ -9,7 +9,7 @@ app.use(express.json())
 app.use('/api/user',userRouter)
 app.use('/api/emp/employees',employeeRouter)
 app.use(express.urlencoded({ extended: true }))
-app.use(cors({origin: "http://localhost:3035"}))
+app.use(cors)
 
 mongoose.Promise = global.Promise
 
